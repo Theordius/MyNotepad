@@ -14,13 +14,13 @@ class CategoryViewController: UITableViewController {
     var categories = [Category]()
     
     let contex = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadCategories()
     }
-
+    
     //MARK: - TableView Datasource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +33,8 @@ class CategoryViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
         
         cell.textLabel?.text = categories[indexPath.row].name
+        
+        return cell
     }
     
     //MARK: - Table Delegate Methods
@@ -48,7 +50,7 @@ class CategoryViewController: UITableViewController {
             destinationVC.selectedCategory = categories[indexPath.row]
         }
     }
- 
+    
     //MARK: - Data Manipulation Methods
     
     func saveCategories() {
@@ -72,7 +74,35 @@ class CategoryViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    //MARK: - Add New Categories
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
+            
+            let newCategory = Category(context: self.contex)
+            newCategory.name = textField.text!
+            
+            self.categories.append(newCategory)
+            
+            self.saveCategories()
+            
+        }
+        alert.addAction(action)
+        
+        alert.addTextField { (field) in
+            
+            textField = field
+            textField.placeholder = "Add a new Category"
+            
+        }
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
 }
-
-
-
