@@ -13,7 +13,7 @@
 		103A320827FEDE9000C004D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103A320627FEDE9000C004D6 /* Main.storyboard */; };
 		103A320B27FEDE9000C004D6 /* MyNotepad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 103A320927FEDE9000C004D6 /* MyNotepad.xcdatamodeld */; };
 		103A320D27FEDE9100C004D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103A320C27FEDE9100C004D6 /* Assets.xcassets */; };
-		103A321027FEDE9100C004D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103A320E27FEDE9100C004D6 /* LaunchScreen.storyboard */; };
+		103A321F27FF67FB00C004D6 /* NotesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A321E27FF67FB00C004D6 /* NotesListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		103A320727FEDE9000C004D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		103A320A27FEDE9000C004D6 /* MyNotepad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyNotepad.xcdatamodel; sourceTree = "<group>"; };
 		103A320C27FEDE9100C004D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		103A320F27FEDE9100C004D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		103A321127FEDE9100C004D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		103A321E27FF67FB00C004D6 /* NotesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 			children = (
 				103A320027FEDE9000C004D6 /* AppDelegate.swift */,
 				103A320227FEDE9000C004D6 /* SceneDelegate.swift */,
-				103A321927FEEE7200C004D6 /* Data Models */,
 				103A321827FEEE6000C004D6 /* Controllers */,
+				103A321927FEEE7200C004D6 /* Data Models */,
 				103A321A27FEEE8400C004D6 /* Views */,
 				103A321B27FEEE8C00C004D6 /* Supporting Files */,
 			);
@@ -72,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				103A320427FEDE9000C004D6 /* CategoryViewController.swift */,
+				103A321E27FF67FB00C004D6 /* NotesListTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -88,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				103A320627FEDE9000C004D6 /* Main.storyboard */,
-				103A320E27FEDE9100C004D6 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,7 +160,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				103A321027FEDE9100C004D6 /* LaunchScreen.storyboard in Resources */,
 				103A320D27FEDE9100C004D6 /* Assets.xcassets in Resources */,
 				103A320827FEDE9000C004D6 /* Main.storyboard in Resources */,
 			);
@@ -177,6 +176,7 @@
 				103A320127FEDE9000C004D6 /* AppDelegate.swift in Sources */,
 				103A320327FEDE9000C004D6 /* SceneDelegate.swift in Sources */,
 				103A320B27FEDE9000C004D6 /* MyNotepad.xcdatamodeld in Sources */,
+				103A321F27FF67FB00C004D6 /* NotesListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +189,6 @@
 				103A320727FEDE9000C004D6 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		103A320E27FEDE9100C004D6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				103A320F27FEDE9100C004D6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
