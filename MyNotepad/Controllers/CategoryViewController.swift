@@ -48,6 +48,31 @@ class CategoryViewController: UITableViewController {
             destinationVC.selectedCategory = categories[indexPath.row]
         }
     }
+ 
+    //MARK: - Data Manipulation Methods
+    
+    func saveCategories() {
+        do {
+            try contex.save()
+        } catch {
+            print("Error saving contex \(error)")
+        }
+        
+        tableView.reloadData()
+    }
+    
+    func loadCategories(with request: NSFetchRequest<Category> = Category.fetchRequest()) {
+        
+        do {
+            categories = try contex.fetch(request)
+        } catch {
+            print("Error loading categories \(error)")
+        }
+        
+        tableView.reloadData()
+    }
+    
+}
 
 
 
